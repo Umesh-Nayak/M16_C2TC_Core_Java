@@ -1,8 +1,8 @@
 package com.tns.users;
 
-import com.tns.application.GSBankFactory;
-import com.tns.application.GSCurrentAcc;
-import com.tns.application.GSSavingAcc;
+import com.tns.application.MMBankFactory;
+import com.tns.application.MMCurrentAcc;
+import com.tns.application.MMSavingAcc;
 import com.tns.framework.BankFactory;
 import com.tns.framework.CurrentAcc;
 import com.tns.framework.SavingAcc;
@@ -10,18 +10,18 @@ import com.tns.framework.SavingAcc;
 public class Users {
 
 	public static void main(String[] args) {
-		BankFactory s=new GSBankFactory();
-		SavingAcc p=new GSSavingAcc(1000254511,"Umesh Nayak",5550, true);
-		CurrentAcc n=new GSCurrentAcc(1000254512, "Rohit Moholkar", 4550,50);
+		BankFactory s=new MMBankFactory();
+		SavingAcc p=new MMSavingAcc(101,"Umesh",550, true);
+		CurrentAcc n=new MMCurrentAcc(102, "Rohit", 550,50);
 		System.out.println("Saving Account");
 		p.withdraw(p.getaccBal());
 		System.out.println("Current Account");
-		n.withdraw(n.getaccBal());
-		
+		n.withdraw(n.getMINBAL());
 		
 		
 		System.out.println(p);
 		System.out.println(n);
+
 	}
 
 }
