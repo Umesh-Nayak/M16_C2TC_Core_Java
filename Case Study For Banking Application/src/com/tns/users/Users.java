@@ -11,8 +11,8 @@ public class Users {
 
 	public static void main(String[] args) {
 		BankFactory s=new MMBankFactory();
-		SavingAcc p=new MMSavingAcc(101,"Umesh",550, true);
-		CurrentAcc n=new MMCurrentAcc(102, "Rohit", 550,50);
+		SavingAcc p=new MMSavingAcc(1000254501,"Umesh Nayak",5500.47F, true);
+		CurrentAcc n=new MMCurrentAcc(1000254502, "Rohit Moholkar", 4550.25F,50);
 		System.out.println("Saving Account");
 		p.withdraw(p.getaccBal());
 		System.out.println("Current Account");
